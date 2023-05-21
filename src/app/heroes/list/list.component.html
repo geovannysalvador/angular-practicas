@@ -1,1 +1,29 @@
-<!-- <p>list works!</p> -->
+<!-- ngfor duplicado de elementos -->
+
+
+<h3>Listado de heroes</h3>
+
+<!-- si no se cumple el deletedHero entonces llama a nothingDeleted -->
+<div *ngIf="deletedHero; else nothingDeleted">
+  <h3>Heroe Borrado: <small class="text-danger">{{deletedHero}}</small></h3>
+</div>
+
+<!-- referencia local usando # como #nothingDeleted -->
+<!-- el ng-template no existe fisicamente como no es un elemento html  -->
+<ng-template #nothingDeleted>
+  <h3>No ha borrado nada</h3>
+</ng-template>
+
+
+<button *ngIf="heroNames.length > 0 " (click)="removeLastHeroe()" class="btn btn-outline-danger" >
+  Borrar ultimo Heroe
+</button>
+
+
+<ul class="mt-2 list-group">
+
+  <li *ngFor="let name of heroNames" class="list-group-item">{{ name }}</li>
+  <!-- otra forma solo usa el strong -->
+  <!-- <li *ngFor="let name of heroNames" class="list-group-item"> <strong> {{ name }}</strong> </li> -->
+
+</ul>
