@@ -15,9 +15,9 @@ import { Component } from "@angular/core";
   template: `
       <h1>{{title}}</h1>
       <h3>counter: {{counter}}</h3>
-      <button (click)="increaseBy(+5)" > + 5 </button>
-      <button (click)="resetCounter()"> Reset </button>
-      <button (click)="decreaseBy(-1)" > - 1 </button>
+      <button (click)="increaseBy(+5)" class="btn btn-success mx-4" > + 5 </button>
+      <button (click)="resetCounter()" class="btn btn-danger" > Reset </button>
+      <button (click)="decreaseBy(-1)" class="btn btn-success mx-4" > - 1 </button>
   `
 })
 export class CounterComponent{

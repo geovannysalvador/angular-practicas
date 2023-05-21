@@ -3,9 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { CounterModule } from './counter/counter.module';
 import { HeroesModule } from './heroes/heroes.module';
+import { DbzModule } from './dbz/dbz.module';
 
 
 import { AppComponent } from './app.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { AppComponent } from './app.component';
     // aca va en counter.module.ts para indicar que lo use
     // al realizar un modulo ya solo hago una importacion y envia toda la carpeta counter por asi decirlo
     CounterModule,
-    HeroesModule
+    HeroesModule,
+    DbzModule,
 
   ],
   providers: [],
