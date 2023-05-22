@@ -1,11 +1,22 @@
-<h4>Agregar Personaje</h4>
+<h4>Agregar Producto</h4>
 
 <!-- form no es necesario solo es practica -->
-<form class="row">
+<form class="row" (ngSubmit)="emitCharacter()">
 
-  <input type="text" placeholder="Nombre" class="form-control mb-2">
-  <input type="number" placeholder="Poder" class="form-control mb-2">
+  <input
+  type="text"
+  [(ngModel)]="character.name" name="name"
+  class="form-control mb-2"
+  placeholder="Nombre" >
 
-  <button type="submit" class="btn btn-dark">Agregar</button>
+  <input
+  type="number"
+  [(ngModel)]="character.price" name="price"
+  class="form-control mb-2"
+  placeholder="Precio">
+
+  <button type="submit" class="btn btn-dark" >Agregar</button>
+  <pre>{{character | json}}</pre>
+
 
 </form>
