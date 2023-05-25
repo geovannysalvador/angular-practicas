@@ -10,32 +10,36 @@
       let isOdd = odd,
       "
 
-      class="list-group-item"
+      class="list-group-item d-flex justify-content-between align-items-center"
       [ngClass]="{' list-group-item-success': isFirst,
       ' list-group-item-danger': isLast,
 
 
       }">
-        <!-- Aca uso el let i = index para extraer su posicion  -->
-        <strong class="text-primary">{{i+1}} - </strong>
+        <div>
+          <!-- Aca uso el let i = index para extraer su posicion  -->
+          <strong class="text-primary">{{i+1}} - </strong>
 
-        <span>{{ character.name }} - </span>
-        <strong> Precio: </strong>
-        <span>{{ character.price }}</span>
+          <span>{{ character.name }} - </span>
+          <strong> Precio: </strong>
+          <span>{{ character.price }}</span>
 
-        <!-- para ver cual es el ultimo y primero se coloca en el ngFOr de arriba  -->
-                <!-- let isFirst = first;
-                let isLast = last;
-                Para ver si es par o no
-                let isEven = even;
-                para ver si es inpar
-                let isOdd = odd;-->
+          <!-- para ver cual es el ultimo y primero se coloca en el ngFOr de arriba  -->
+          <!-- let isFirst = first;
+                          let isLast = last;
+                          Para ver si es par o no
+                          let isEven = even;
+                          para ver si es inpar
+                          let isOdd = odd;-->
 
-        <!-- aca solo llamamos a lo indicado en el ngFor
-        <span> Primero: {{ isFirst }}</span>
-        <span> Ultimo: {{ isLast }}</span>
-        <span> Par: {{ isEven }}</span>
-        <span> Inpar: {{ isOdd }}</span> -->
+          <!-- aca solo llamamos a lo indicado en el ngFor
+                  <span> Primero: {{ isFirst }}</span>
+                  <span> Ultimo: {{ isLast }}</span>
+                  <span> Par: {{ isEven }}</span>
+                  <span> Inpar: {{ isOdd }}</span> -->
+        </div>
+
+        <button (click)="onDeleteCharacterButton(i)" class="btn btn-danger">X</button>
 
       </li>
     </ul>

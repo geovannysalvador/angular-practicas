@@ -43,4 +43,19 @@ export class MainPageComponent {
     price: 5000,
   },
 ];
+
+//acciones que deben de hacer en si operaciones
+//metodo que no regresa nada.
+//lo que debe de hacer es decir ingresa o es la accion cualquiera que realiza
+onNewCharacterAccion( character:Character ):void{
+  //push o unshift
+  //aca solo mando a indicar que character lo interte en la primera posicion y enviare el character
+  this.characters.push(character);
+}
+
+//nuevo metodo para eliminar
+//elimino el id que recibi del arrglego
+onDeleteCharacter(index:number):void{
+  this.characters.splice(index,1);
+}
 }
