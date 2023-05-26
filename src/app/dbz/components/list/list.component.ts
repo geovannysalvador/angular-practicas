@@ -20,12 +20,12 @@ export class ListComponent {
 
     @Output()
     //este onDElete es un evento en particular y se usa () en la etiqueta dbz-list del archivo main-pages
-    public OnDelete:EventEmitter<number> = new EventEmitter();
+    public OnDelete:EventEmitter<string> = new EventEmitter();
 
     //mandar a llamar este evento: onDeleteCharacter, en el main-page en la etiqueta dbz-list
     //esta es la accion que debe de hacer el OnDelete me manda el id del arreglo
-    onDeleteCharacterButton(index:number):void{
-      //TODO: emitir el id del personaje
-    this.OnDelete.emit(index);
+    onDeleteCharacterButton(id?:string):void{
+      if(!id) return
+    this.OnDelete.emit(id);
   }
 }

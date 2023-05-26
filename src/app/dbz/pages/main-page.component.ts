@@ -13,7 +13,21 @@ import { DbzService } from '../services/dbz.service';
 export class MainPageComponent {
 
   //mandar a llamar a los servicios o injection de dependecias con un constructor
-  constructor(public dbzService: DbzService){
-    
-  }
+  constructor(private dbzService: DbzService){}
+
+    //productos. Todo get debe de regresar un valor return...
+    //eso modifica el acceso del main page html
+    get characters(): Character[] {
+      return [...this.dbzService.characters];
+    }
+
+    onDeleteCharacter(id:string):void{
+      this.dbzService.onDeleteCharacterById(id);
+    }
+
+    onNewCharacter( character:Character):void{
+      this.dbzService.addNewCharacterAccion(character);
+    }
+
+
 }

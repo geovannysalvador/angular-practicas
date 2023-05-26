@@ -8,8 +8,8 @@
   <div class="col">
     <!-- aca le mando la estructura de caracterList y la "bd" o informnacion en characters mando la lista -->
     <dbz-list
-    [caracterList]="dbzService.characters"
-    (OnDelete)="dbzService.onDeleteCharacter($event)"
+    [caracterList]="characters"
+    (OnDelete)="onDeleteCharacter($event)"
     >
   </dbz-list>
 
@@ -18,7 +18,7 @@
   <!-- Formulario -->
   <div class="col">
     <!-- aca indico atrubuto llaves cuadradas y parentesis eventos aca agrego un nuevo articulo -->
-    <dbz-add-character (onNewCharacter)="dbzService.onNewCharacterAccion($event)" ></dbz-add-character>
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)" ></dbz-add-character>
   </div>
 
 </div>
