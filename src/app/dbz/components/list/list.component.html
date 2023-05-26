@@ -1,5 +1,5 @@
     <h4>Listado</h4>
-    <!-- [ngclass] sirve para clases de forma condicional, si cumple que applique lo indicado -->
+
     <ul class="list-group">
       <li *ngFor="
       let character of caracterList;
@@ -17,26 +17,13 @@
 
       }">
         <div>
-          <!-- Aca uso el let i = index para extraer su posicion  -->
+
           <strong class="text-primary">{{i+1}} - </strong>
 
           <span>{{ character.name }} - </span>
           <strong> Precio: </strong>
           <span>{{ character.price }}</span>
 
-          <!-- para ver cual es el ultimo y primero se coloca en el ngFOr de arriba  -->
-          <!-- let isFirst = first;
-                          let isLast = last;
-                          Para ver si es par o no
-                          let isEven = even;
-                          para ver si es inpar
-                          let isOdd = odd;-->
-
-          <!-- aca solo llamamos a lo indicado en el ngFor
-                  <span> Primero: {{ isFirst }}</span>
-                  <span> Ultimo: {{ isLast }}</span>
-                  <span> Par: {{ isEven }}</span>
-                  <span> Inpar: {{ isOdd }}</span> -->
         </div>
 
         <button (click)="onDeleteCharacterButton(character.id)" class="btn btn-danger">X</button>

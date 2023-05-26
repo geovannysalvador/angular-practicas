@@ -19,9 +19,7 @@ import { AddCharacterComponent } from './components/add-character/add-character.
     MainPageComponent,
   ],
   imports: [
-    //importar para poder usar [(ngModel)] en el add character html
     FormsModule,
-    //para poder usar el ngfor, if...
     CommonModule,
   ],
 

@@ -12,7 +12,7 @@ import { Character } from '../interfaces/character.interface';
 export class DbzService {
 
 
-  //codigo del main.ts ya que son servicios pero en este archivo lo vamos a pegar
+
   public characters:Character[] = [{
     id: uuid(),
     name: 'Asus Laptop',
@@ -55,23 +55,13 @@ export class DbzService {
   },
 ];
 
-//acciones que deben de hacer en si operaciones
-//metodo que no regresa nada.
-//lo que debe de hacer es decir ingresa o es la accion cualquiera que realiza
-addNewCharacterAccion(character:Character ):void{
-  //push o unshift
-  //aca solo mando a indicar que character lo interte en la primera posicion y enviare el character
 
-  //nuevo objeto con todas las propiedades
+addNewCharacterAccion(character:Character ):void{
+
   const newCharacter:Character = {id: uuid(), ...character }
   this.characters.push(newCharacter);
 }
 
-//nuevo metodo para eliminar
-//elimino el id que recibi del arrglego de forma normal
-// onDeleteCharacter(index:number):void{
-//   this.characters.splice(index,1);
-// }
 onDeleteCharacterById(id:string){
   this.characters = this.characters.filter( character => character.id !== id );
 }
